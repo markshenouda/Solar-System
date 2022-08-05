@@ -1,6 +1,6 @@
 import { useRef, Suspense } from "react";
 import { Canvas, useLoader, useFrame } from "@react-three/fiber";
-import { OrbitControls, Stars, Preload } from "@react-three/drei";
+import { OrbitControls, Stars, Preload, Html } from "@react-three/drei";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { planets } from "./planets";
 
@@ -32,6 +32,7 @@ function Planet({ planet, idx }) {
       ) : (
         <meshStandardMaterial attach="material" map={texture} />
       )}
+      <Html className="planet-name">{planet.name}</Html>
     </mesh>
   );
 }

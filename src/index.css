@@ -14,6 +14,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1b1b1b;
+  background-color: #151515;
   color: white;
+}
+
+.planet-name {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 5px;
+  text-transform: capitalize;
+}
+
+.planet-name::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: #fff;
 }
